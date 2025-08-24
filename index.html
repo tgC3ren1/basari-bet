@@ -1,60 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>Ogedaypro | Güvenilir Siteler</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            background-color: #1c1c1c;
-            margin: 0;
-            padding: 0;
-            font-family: sans-serif;
-        }
-        .container {
-            max-width: 943px;
-            margin: 20px auto;
-            padding: 10px;
-        }
-        .split-banner {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-        }
-        .card {
-            margin-top: 20px;
-        }
-        .card img, .split-banner img {
-            width: 100%;
-            border-radius: 10px;
-            display: block;
-        }
-        a {
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zbahis • Fixbet • Matadorbet – Triple Showcase</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0B1620; --card:#0f2438; --text:#eaf6ff; --muted:#a8c5d6; --ring:rgba(255,255,255,.06);
+      --radius:22px; --shadow:0 20px 60px rgba(0,0,0,.35);
+      --zb-cyan:#19D5FF; --zb-cyan-2:#11b7ea; --zb-glow:rgba(17,183,234,.45);
+      --fx-neon:#B8FF1E; --fx-glow:rgba(184,255,30,.45);
+      --mt-orange:#ED3903; --mt-glow:rgba(237,57,3,.45);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:radial-gradient(1200px 800px at 10% 10%, #0e1e2b 0%, #071119 45%, #050b12 100%);color:var(--text);font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+
+    .wrap{max-width:1320px;margin-inline:auto;padding:48px 20px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    @media (max-width:1100px){.grid{grid-template-columns:1fr 1fr}}
+    @media (max-width:720px){.grid{grid-template-columns:1fr}}
+
+    .card{position:relative;overflow:hidden;border-radius:var(--radius);padding:22px;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));outline:1px solid var(--ring);box-shadow:var(--shadow)}
+    .card::before{content:"";position:absolute;inset:-2px;border-radius:calc(var(--radius) + 2px);filter:blur(18px);opacity:.9;z-index:-1}
+    .logo{max-height:48px;margin-bottom:10px}
+    .cta{margin-top:18px}
+    .btn{appearance:none;border:0;border-radius:16px;padding:12px 16px;font-weight:700;cursor:pointer;transition:transform .12s ease, box-shadow .2s ease, filter .25s ease;display:inline-block;text-align:center}
+    .btn:hover{transform:translateY(-1px)}
+
+    /* Brand skins */
+    .zb{background:linear-gradient(180deg, rgba(37,255,230,.08), rgba(13,197,255,.06) 40%, transparent 100%), radial-gradient(800px 400px at 0% 0%, rgba(25,213,255,.18), transparent 50%)}
+    .zb::before{background:radial-gradient(400px 120px at 40% -10%, rgba(17,183,234,.28), transparent 70%)}
+    .zb .btn.primary{background:linear-gradient(180deg,var(--zb-cyan),var(--zb-cyan-2));color:#06202b;box-shadow:0 10px 30px rgba(17,183,234,.35)}
+
+    .fix{background:linear-gradient(180deg, rgba(184,255,30,.05), rgba(184,255,30,.03) 40%, transparent), radial-gradient(700px 360px at 100% 0%, rgba(184,255,30,.22), transparent 55%)}
+    .fix::before{background:radial-gradient(420px 130px at 70% -10%, rgba(184,255,30,.28), transparent 70%)}
+    .fix .btn.primary{background:linear-gradient(180deg,#c8ff3a,var(--fx-neon));color:#0e160c;box-shadow:0 10px 30px rgba(184,255,30,.35)}
+
+    .mt{background:linear-gradient(180deg, rgba(237,57,3,.07), rgba(237,57,3,.03) 50%, transparent), radial-gradient(700px 360px at 0% 0%, rgba(237,57,3,.22), transparent 55%)}
+    .mt::before{background:radial-gradient(420px 130px at 30% -10%, rgba(237,57,3,.28), transparent 70%)}
+    .mt .btn.primary{background:linear-gradient(180deg,#ff6a3f,var(--mt-orange));color:#2c0d07;box-shadow:0 10px 30px rgba(237,57,3,.25)}
+
+    /* Hero */
+    .hero{display:flex;align-items:center;justify-content:center;margin:-6px 0 26px}
+    .hero-title{font-weight:800;letter-spacing:.6px;text-align:center;font-size:clamp(26px,3.8vw,48px);
+      text-shadow:0 0 14px rgba(25,213,255,.5),0 0 28px rgba(25,213,255,.25),0 0 52px rgba(184,255,30,.22);
+      background:linear-gradient(180deg,#fff,#cfefff 70%, #8fdcff);
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+      animation:glowPulse 3.2s ease-in-out infinite, popAnim 2.8s ease-in-out infinite}
+    @keyframes glowPulse{0%,100%{filter:drop-shadow(0 0 14px rgba(25,213,255,.35))}50%{filter:drop-shadow(0 0 26px rgba(184,255,30,.38))}}
+    @keyframes popAnim{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+
+    /* Promo pill (single line under logos) */
+    .promo{display:inline-block;margin:4px 0 2px;padding:8px 12px;border-radius:14px;font-weight:800;letter-spacing:.3px;--glow:rgba(255,255,255,.45);animation:breathe 3.6s ease-in-out infinite, popAnim 2.8s ease-in-out infinite}
+    .zb .promo{--glow:rgba(25,213,255,.55);background:linear-gradient(180deg,rgba(25,213,255,.18),rgba(25,213,255,.10));box-shadow:0 0 18px rgba(25,213,255,.35), inset 0 0 22px rgba(25,213,255,.15);color:#dff8ff;border:1px solid rgba(25,213,255,.35)}
+    .fix .promo{--glow:rgba(184,255,30,.55);background:linear-gradient(180deg,rgba(184,255,30,.22),rgba(184,255,30,.10));box-shadow:0 0 18px rgba(184,255,30,.35), inset 0 0 22px rgba(184,255,30,.15);color:#f4ffe0;border:1px solid rgba(184,255,30,.35)}
+    .mt .promo{--glow:rgba(237,57,3,.55);background:linear-gradient(180deg,rgba(237,57,3,.22),rgba(237,57,3,.10));box-shadow:0 0 18px rgba(237,57,3,.35), inset 0 0 22px rgba(237,57,3,.15);color:#fff2ee;border:1px solid rgba(237,57,3,.35)}
+    @keyframes breathe{0%,100%{filter:drop-shadow(0 0 10px var(--glow))}50%{filter:drop-shadow(0 0 22px var(--glow))}}
+
+    footer{margin-top:34px;color:#86a5b7;text-align:center;font-size:13px}
+  </style>
 </head>
 <body>
-<div class="container">
-    <!-- Banner Alanı -->
-    <div class="split-banner">
-        <a href="https://cutt.ly/veoT5cGq" target="_blank">
-            <img src="images/banner/matadorbet.gif" alt="matadorbet">
-        </a>
-        <a href="https://cutt.ly/Feg1piJG" target="_blank">
-            <img src="images/banner/fixbet.gif" alt="fixbet">
-        </a>
+  <div class="wrap">
+    <div class="hero"><h1 class="hero-title">Yılın En Çok Kazandıran Siteleri</h1></div>
+
+    <div class="grid">
+      <!-- 1) ZBAHIS -->
+      <section class="card zb">
+        <img class="logo" src="./logo color - light.png" alt="Zbahis Logo">
+        <div class="promo">1000 TL DENEME BONUSU</div>
+        <div class="cta">
+          <a class="btn primary" href="https://cutt.ly/UrJdHLYI" target="_blank" rel="noopener">Siteyi Aç</a>
+        </div>
+      </section>
+
+      <!-- 2) FIXBET -->
+      <section class="card fix">
+        <img class="logo" src="./fixbet-logopng.png" alt="Fixbet Logo">
+        <div class="promo">1000 TL DENEME BONUSU</div>
+        <div class="cta">
+          <a class="btn primary" href="https://cutt.ly/UrJdHLYI" target="_blank" rel="noopener">Siteyi Aç</a>
+        </div>
+      </section>
+
+      <!-- 3) MATADORBET -->
+      <section class="card mt">
+        <img class="logo" src="./matador beyaz (4).png" alt="Matadorbet Logo">
+        <div class="promo">1000 TL DENEME BONUSU</div>
+        <div class="cta">
+          <a class="btn primary" href="https://cutt.ly/5rJdCqHM" target="_blank" rel="noopener">Siteyi Aç</a>
+        </div>
+      </section>
     </div>
 
-    <!-- Kart Alanı -->
-    <div class="split-banner card">
-        <a href="https://cutt.ly/veoT5cGq" target="_blank">
-            <img src="images/content/matadorbet.png" alt="matadorbet">
-        </a>
-        <a href="https://cutt.ly/Feg1piJG" target="_blank">
-            <img src="images/content/fixbet.gif" alt="fixbet">
-        </a>
-    </div>
-</div>
+    <footer>© 2025 Milli Parklar Genel Müdürlüğü – Yasal onaylı siteler.</footer>
+  </div>
 </body>
 </html>
